@@ -1,0 +1,11 @@
+[project]
+name = styleguide
+url = https://styleguide.torproject.org/
+url_style = relative
+locale = en
+
+[alternatives.en]
+name = English
+primary = yes
+url_prefix = /
+locale = en_US

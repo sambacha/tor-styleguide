@@ -1,0 +1,537 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }} | Tor Styleguide {% endblock %}
+{% block body %}
+
+<nav id="visuals-nav" class="nav flex-column d-none d-xl-block col-xl-1 border bg-white p-4 sticky-top">
+  <ul class="nav bd-toc flex-column">
+    {% for id, item in bag('visuals').items() %}
+      <li class="nav-item">
+        <a class="nav-link p-2" href="{{ item.path }}">{{ item.label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<div class="row col-sm-12 col-xs-12 ml-sm-auto col-md-9 col-lg-9 mx-auto">
+
+<main role="main" class="col-12 col-md-10 col-xl-10 content-scroll" data-spy="scroll" data-offset="0">
+
+  {{ this.body }}
+
+ <div class="page-header mb-4 mt-5">
+  <h3>Colors</h3>
+    <p class="text-muted">The main Tor Project color is Purple. Use Dark Purple as a secondary option.</p>
+  </div>
+  <div class="row">
+      <div class="col-4">
+          <div class="rounded pt-5 pl-2 pb-2 mt-3 mb-2 bg-primary text-white small"><code>#7D4698</code></div>
+          <h5 class="text-left">Purple</h5>
+      </div>
+      <div class="col-4">
+          <div class="rounded pt-5 pl-2 pb-2 mt-3 mb-2 bg-dark text-white small"><code>#59316B</code></div>
+          <h5 class="text-left">Dark Purple</h5>
+      </div>
+      <div class="col-4">
+          <div class="rounded pt-5 pl-2 pb-2 mt-3 mb-2 bg-success text-white small"><code>#68B030</code></div>
+          <h5 class="text-left">Green</h5>
+      </div>
+      <div class="col-4">
+          <div class="rounded pt-5 pl-2 pb-2 mt-3 mb-2 bg-light text-black small"><code>#F8F9FA</code></div>
+          <h5 class="text-left">Grey</h5>
+      </div>
+      <div class="col-4">
+          <div class="rounded pt-5 pl-2 pb-2 mt-3 mb-2 bg-secondary text-white small"><code>#333A41</code></div>
+          <h5 class="text-left">Dark Grey</h5>
+      </div>
+      <div class="col-4">
+          <div class="rounded pt-5 pl-2 pb-2 mt-3 mb-2 bg-white text-black small border"><code>#FFFFFF</code></div>
+          <h5 class="text-left">White</h5>
+      </div>
+  </div>
+
+  <h3 class="mt-5">Apps</h3>
+  <p class="text-muted">Our apps' interface use safe and bright colors.</p>
+  <div class="row">
+      <div class="col-3">
+          <div class="rounded pt-5 pl-2 pb-2 mt-3 mb-2 text-white small" style="background:blueviolet;"><code>blueviolet</code></div>
+          <h5 class="text-left">Blue Violet</h5>
+      </div>
+      <div class="col-3">
+          <div class="rounded pt-5 pl-2 pb-2 mt-3 mb-2 text-white small" style="background:darkblue;"><code>darkblue</code></div>
+          <h5 class="text-left">Dark Blue</h5>
+      </div>
+      <div class="col-3">
+          <div class="rounded pt-5 pl-2 pb-2 mt-3 mb-2 text-white small border" style="background:blue;"><code>blue</code></div>
+          <h5 class="text-left">Blue</h5>
+      </div>
+      <div class="col-3">
+          <div class="rounded pt-5 pl-2 pb-2 mt-3 mb-2 text-black small" style="background:lime;"><code>lime</code></div>
+          <h5 class="text-left">Lime</h5>
+      </div>
+  </div>
+
+  <h1 id="grid"></h1>
+  <div class="page-header mb-4 mt-5">
+    <h3>Grid</h3>
+    <p class="text-muted">Our main used grid compositions are outlined here. Use them to generate one column or various columns layouts.</p>
+  </div>
+  <div class="container bg-light p-5">
+      <div class="row mb-1">
+        <div class="col-12">
+          <p class="bg-primary p-3 text-white small">
+             12
+          </p>
+        </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col-4">
+          <p class="bg-primary p-3 text-white small">
+             4
+          </p>
+        </div>
+        <div class="col-8">
+          <p class="bg-primary p-3 text-white small">
+             8
+          </p>
+      </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col-3">
+          <p class="bg-primary p-3 text-white small">
+             3
+          </p>
+        </div>
+        <div class="col-9">
+          <p class="bg-primary p-3 text-white small">
+             9
+          </p>
+        </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col-2">
+          <p class="bg-primary p-3 text-white small">
+             2
+          </p>
+        </div>
+        <div class="col-2">
+          <p class="bg-primary p-3 text-white small">
+             2
+          </p>
+        </div>
+        <div class="col-2">
+          <p class="bg-primary p-3 text-white small">
+             2
+          </p>
+        </div>
+        <div class="col-2">
+          <p class="bg-primary p-3 text-white small">
+             2
+          </p>
+        </div>
+        <div class="col-2">
+          <p class="bg-primary p-3 text-white small">
+             2
+          </p>
+        </div>
+        <div class="col-2">
+          <p class="bg-primary p-3 text-white small">
+             2
+          </p>
+        </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col-3">
+          <p class="bg-primary p-3 text-white small">
+             3
+          </p>
+        </div>
+        <div class="col-3">
+          <p class="bg-primary p-3 text-white small">
+             3
+          </p>
+        </div>
+        <div class="col-3">
+          <p class="bg-primary p-3 text-white small">
+             3
+          </p>
+        </div>
+        <div class="col-3">
+          <p class="bg-primary p-3 text-white small">
+             3
+          </p>
+        </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col-4">
+          <p class="bg-primary p-3 text-white small">
+             4
+          </p>
+        </div>
+        <div class="col-4">
+          <p class="bg-primary p-3 text-white small">
+             4
+          </p>
+        </div>
+        <div class="col-4">
+          <p class="bg-primary p-3 text-white small">
+             4
+          </p>
+        </div>
+      </div>
+      <div class="row mb-1">
+          <div class="col-6">
+            <p class="bg-primary p-3 text-white small">
+               6
+            </p>
+          </div>
+          <div class="col-6">
+            <p class="bg-primary p-3 text-white small">
+               6
+            </p>
+          </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col-8 offset-2">
+          <p class="bg-primary p-3 text-white small">
+             8
+          </p>
+        </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col-6 offset-3">
+          <p class="bg-primary p-3 text-white small">
+             6
+          </p>
+        </div>
+      </div>
+    </div>
+
+  <h1 id="typography"> </h1>
+  <div class="page-header mb-4 mt-5">
+    <h3>Typography</h3>
+    <p class="text-muted">Our main typography is Source Pro made by Paul D. Hunt as Adobe’s first open source typeface family, conceived primarily as a typeface for user interfaces.</p>
+  </div>
+  <div class="row">
+       <div class="col-12">
+         <p class="text-black small text-muted">H1</p>
+         <h1>Privacy is a right, not a privilege</h1>
+         <p class="text-black small text-muted">H2</p>
+         <h2>Privacy is a right, not a privilege.</h2>
+         <p class="text-black small text-muted">H3</p>
+         <h3>Privacy is a right, not a privilege</h3>
+         <p class="text-black small text-muted">H4</p>
+         <h4>Privacy is a right, not a privilege</h4>
+         <p class="text-black small text-muted">H5</p>
+         <h5>Privacy is a right, not a privilege</h5>
+         <p class="text-black small text-muted">H6</p>
+         <h6>Privacy is a right, not a privilege</h6>
+
+         <p class="text-black small pt-5 text-muted">H1 display</p>
+         <h1 class="display-1 text-primary">Why Anonymity Matters</h1>
+         <p class="text-black small text-muted">H2 display</p>
+         <h1 class="display-2 text-primary">Why Anonymity Matters</h1>
+         <p class="text-black small text-muted">H3 display</p>
+         <h1 class="display-3 text-primary">Why Anonymity Matters</h1>
+         <p class="text-black small text-muted">H4 display</p>
+         <h1 class="display-4 text-primary">Why Anonymity Matters</h1>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-12 pt-5">
+         <p class="text-black small text-muted">Paragraph</p>
+       </div>
+       <div class="col">
+         <p class="text-black small text-muted">SANS</p>
+         <p>
+           Privacy experts warn that law enforcement, intelligence services, and malicious hackers run their own exit nodes for exactly that surveillance purpose. It's critical, then, <mark>for Tor users to only visit HTTPS-protected websites</mark> to ensure that the information that passes between the browser and the site remains encrypted.
+         </p>
+       </div>
+       <div class="col">
+         <p class="text-black small text-muted">SERIF</p>
+         <p class="font-family-serif">
+           The Tor network is a group of volunteer-operated servers that allows people to improve their privacy and security on the Internet. Tor's users employ <a href="#">this network</a> by connecting through a series of virtual tunnels rather than making a direct connection, thus allowing both organizations and individuals to share information over public networks without compromising their privacy.
+         </p>
+         </div>
+         <div class="col">
+           <p class="text-black small text-muted text-right
+           ">ARABIC</p>
+           <p class="text-right">
+         شبكة تور هي مجموعة من الخوادم التي يديرها المتطوعون والتي تسمح للناس بتحسين خصوصيتهم وأمنهم على الإنترنت. يستخدم مستخدمو تور هذه الشبكة من خلال الاتصال من خلال سلسلة من الأنفاق الافتراضية بدلا من إجراء اتصال مباشر، مما يسمح للمنظمات والأفراد على حد سواء لتبادل المعلومات عبر الشبكات العامة دون المساس بخصوصيتهم. وعلى نفس المنوال، يعتبر تور أداة فعالة للرقابة على الرقابة، مما يسمح للمستخدمين بالوصول إلى وجهات أو محتويات محجوبة. يمكن أيضا استخدام تور كبنة بناء لمطوري البرمجيات لإنشاء أدوات اتصال جديدة مع ميزات خصوصية مضمنة.
+           </p>
+         </div>
+     </div>
+
+     <h1 id="icons"> </h1>
+     <div class="page-header mb-4 mt-5">
+       <h3>Icons</h3>
+       <p class="text-muted">Download the Tor icons set from <a class="btn-link" title="Tor Icons" href="https://people.torproject.org/~irl/icons/tor-icons.zip" target="_blank">here</a> (.zip)</p>
+     </div>
+     <div class="row">
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-authority text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">authority</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-badexit text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">badexit</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-bridge text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">bridge</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-country text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">country</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-directory text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">directory</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-exit text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">exit</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-fallbackdir text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">fallbackdir</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-fast text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">fast</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-fingerprint text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">fingerprint</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-guard text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">guard</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-hibernating text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">hibernating</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-hsdir text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">hsdir</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-ipv4 text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">ipv4</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-ipv6 text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">ipv6</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-ipv6exit text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">ipv6exit</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-noedconsensus text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">noedconsensus</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-notrecommended text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">notrecommended</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-onion-alt text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">onion</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-onion text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">onion-alt</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-reachableipv4 text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">reachableipv4</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-reachableipv6 text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">reachableipv6</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-relay text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">relay</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-running text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">running</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-stable text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">stable</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-tshirt text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">tshirt</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-unmeasured text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">unmeasured</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-unreachableipv4 text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">unreachableipv4</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-unreachableipv6 text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">unreachableipv6</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-v2dir text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">v2dir</span>
+       </div>
+       <div class="col-4 col-sm-3 col-lg-2 text-center pt-3 pb-3">
+           <span class="inner">
+               <i class="ti ti-valid text-muted" style="font-size:1.75rem;"></i>
+           </span>
+           <br>
+           <span class="badge p-0">valid</span>
+       </div>
+     </div>
+
+
+     <h1 id="illustrations"> </h1>
+     <div class="page-header mb-4 mt-5">
+       <h3>Illustrations</h3>
+       <!--p class="text-muted">a description</p-->
+     </div>
+     <div class="row">
+       <div class="col-4">
+         <img src="../static/images/tor-homepage/svg/block-trackers.svg" alt="block trackers"/>
+       </div>
+       <div class="col-4">
+         <img src="../static/images/tor-homepage/svg/surveillance.svg" alt="surveillance"/>
+       </div>
+       <div class="col-4">
+         <img src="../static/images/tor-homepage/svg/fingerprinting.svg" alt="fingerprinting"/>
+       </div>
+       <div class="col-4">
+         <img src="../static/images/tor-homepage/svg/encryption.svg" alt="encryption"/>
+       </div>
+       <div class="col-4">
+         <img src="../static/images/tor-homepage/svg/browse-freely.svg" alt="browse freely"/>
+       </div>
+       <div class="col-4">
+         <img src="https://torproject.org/static/images/download/svg/get-connected.svg" alt="get connected"/>
+       </div>
+     </div>
+     <div class="page-header mb-4 mt-5 w-100">
+       <p class="text-muted">Tor Browser Onboarding</p>
+     </div>
+     <div class="row">
+         <div class="col-4 p-5">
+           <img src="../static/images/tb-onboarding/circuit.svg" alt="circuit"/>
+         </div>
+         <div class="col-4 p-5">
+           <img src="../static/images/tb-onboarding/circumvention.svg" alt="circumvention"/>
+         </div>
+         <div class="col-4 p-5">
+           <img src="../static/images/tb-onboarding/protected.svg" alt="protected"/>
+         </div>
+         <div class="col-4 p-5">
+           <img src="../static/images/tb-onboarding/decentralized.svg" alt="decentralized"/>
+         </div>
+         <div class="col-4 p-5">
+           <img src="../static/images/tb-onboarding/onion-services.svg" alt="onion-services"/>
+         </div>
+         <div class="col-4 p-5">
+           <img src="../static/images/tb-onboarding/security.svg" alt="security"/>
+         </div>
+     </div>
+     <h1 id="pattern"> </h1>
+     <div class="page-header mb-4 mt-5">
+       <h3>Onion Pattern</h3>
+     </div>
+     <div class="row"></div>
+</main>
+{% endblock %}

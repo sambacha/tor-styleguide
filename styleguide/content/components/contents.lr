@@ -1,0 +1,8 @@
+_model: page
+---
+title: Components
+---
+body:
+
+---
+_template: components.html
